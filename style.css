@@ -10,6 +10,7 @@
 body {
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
+
 }
 
 /* header */
@@ -36,22 +37,34 @@ header {
     height: 47px;
 }
 
+/* adding media queries for menu bar */
+.left_menu-nav {
+    display: none;
+    font-size: 20px;
+}
+
+
 /* nav middle paragraph */
 
 .nav_middle {
     display: flex;
     gap: 30px;
 }
-.discover_box{
+
+.discover_box {
     border: 1px solid transparent;
+    /* background-color: transparent; */
     text-align: center;
 }
-.discover_box:hover{
+
+.discover_box:hover {
+
     padding: 5px;
     border-radius: 50px;
     background-color: rgb(230, 224, 224);
 }
-.underline_nav_middle:hover{
+
+.underline_nav_middle:hover {
     text-decoration: 1.5px underline;
 }
 
@@ -118,7 +131,8 @@ header {
     gap: 5px;
 
 }
-.search_sec3:hover{
+
+.search_sec3:hover {
     border-bottom: 2px solid black;
     color: gray;
 }
@@ -142,24 +156,25 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.inputbox_container {
     border: 1px solid rgb(228, 225, 225);
     height: 6%;
     width: 59%;
     border-radius: 50px;
-    display: flex;
+    margin-left: 20%;
     box-shadow: 0px 7px 10px rgb(231, 223, 223);
-    
-    
+}
+
+.inputbox_container {
+    display: flex;
+
 }
 
 .inputbox_container i {
     font-size: 20px;
     padding-left: 20px;
-    padding-top: 20px;
+    padding-top: 7px;
 }
+
 .inputbox_container input {
     border: none;
     font-size: medium;
@@ -167,7 +182,8 @@ header {
     width: 750px;
     outline: none;
 }
-.inputbox_container button {
+
+.parent_container button {
     background-color: rgb(92, 228, 169);
     font-weight: bold;
     font-size: 16px;
@@ -178,9 +194,11 @@ header {
     margin: 4px;
     border: none;
 }
-.inputbox_container button:hover{
+
+.parent_container button:hover {
     background-color: rgb(130, 240, 192);
 }
+
 /* big img section 5 */
 .bigimg_sec5 {
     display: flex;
@@ -188,11 +206,13 @@ header {
     margin-top: 60px;
     position: relative;
 }
+
 .bigimg_sec5 img {
     width: 75%;
     height: 500px;
     border-radius: 10p
 }
+
 /* logo inside big img */
 .bigimg_logo img {
     height: 120px;
@@ -210,7 +230,8 @@ header {
     top: 65%;
     left: 14%;
 }
-.inside_img button:hover{
+
+.inside_img button:hover {
     background-color: rgb(228, 221, 221);
 }
 
@@ -239,6 +260,7 @@ header {
 .beng_exp {
     margin-top: 40px;
     margin-left: 12.5%;
+
 }
 
 .beng_exp p {
@@ -259,17 +281,34 @@ header {
 }
 
 .beng_img {
-   
+
     flex-grow: 1;
     flex-basis: 20%;
-    position:relative ;
+    position: relative;
+    flex-wrap: wrap;
+    opacity: 1;
+    animation-duration: 2s;
+    animation-name: scale;
+
+}
+
+@keyframes scale {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .beng_img img {
     border-radius: 10px;
     width: 100%;
     height: 60%;
-   
+
 }
 
 .beng_img h4 {
@@ -307,98 +346,142 @@ header {
     text-align: center;
     padding: 5px;
 }
+
 /* arrow right */
-.arrow_right{
+.arrow_right {
     font-size: 35px;
-    position:absolute;
+    position: absolute;
     top: 120px;
     right: -20px;
 }
 
 /* vibrant asian */
-.vibrant_asian{
+.vibrant_asian {
     margin-top: -30px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     margin-left: 12%;
 }
-.vibrant_asian p{
+
+.vibrant_asian p {
     margin-top: 10px;
     color: rgb(85, 84, 84);
     font-size: 16px;
 }
+
 /* vibrant images */
-.vibrant_container{
+.vibrant_container {
     display: flex;
     flex-wrap: wrap;
     margin-left: 12%;
     margin-right: 12%;
     gap: 10px;
     margin-top: 30px;
-    
-   
+
+
 }
-.vibrant_images{
+
+.vibrant_images {
     width: 100%;
     flex-grow: 1;
-    flex-basis: 20%; 
+    flex-basis: 20%;
     position: relative;
+    opacity: 1;
+    animation-duration: 2s;
+    animation-name: scale;
 }
-.vibrant_images img{
-    
+
+@keyframes scale {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.vibrant_images img {
+
     border-radius: 10px;
     width: 100%;
     height: 120%;
-    
+
 }
+
 /* vibrant text positioning inside img  */
-.vibrant_images h2{
+.vibrant_images h2 {
     color: white;
     position: absolute;
     font-weight: bolder;
     top: 100%;
     left: 5%;
 }
+
 /* vibrant hover images opacity */
 .vibrant_images img:hover {
     opacity: 0.9;
 }
 
 /* Australian holidays  */
-.aus_hol{
+.aus_hol {
     margin-top: 9%;
     margin-left: 12%;
     padding: 2%;
-    background-color:rgb(0, 170, 108);
-    height:500px ;
+    background-color: rgb(0, 170, 108);
+    height: 500px;
     width: 76%;
     position: relative;
-    
-}  
-.aus_img img{
+
+}
+
+.aus_img {
+    opacity: 1;
+    animation-duration: 2s;
+    animation-name: scale;
+}
+
+@keyframes scale {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.aus_img img {
     height: 440px;
     width: 50%;
 }
+
 /* australia hidden hints */
-.aus_hidden{
+.aus_hidden {
     text-align: center;
     position: absolute;
     top: 120px;
     right: 80px;
     display: flex;
     flex-direction: column;
-    
+
 }
-.aus_hidden p{
-    color:rgb(73, 72, 72);
+
+.aus_hidden p {
+    color: rgb(73, 72, 72);
     font-size: 15px;
 }
-.read_more{
+
+.read_more {
     position: relative;
 }
 
-.aus_hidden button{
-    
+.aus_hidden button {
+
     border: none;
     background-color: black;
     color: white;
@@ -410,12 +493,12 @@ header {
     position: absolute;
     top: 20px;
     right: 160px;
-    
+
 }
 
 /* more to explore */
-.more_explore{
-    
+.more_explore {
+
     margin-top: 5%;
     border: 1px solid transparent;
     background-color: rgb(250, 241, 237);
@@ -424,76 +507,89 @@ header {
 
 
 }
-.more_explore h2{
+
+.more_explore h2 {
     margin-top: 2%;
     margin-left: 12%;
 }
 
 /*images explore  */
-.exp__img--container{
+.exp__img--container {
     margin-top: 2%;
     display: flex;
     gap: 15px;
     margin-left: 12%;
     margin-right: 12%;
 }
-.exp_img{
+
+.exp_img {
     flex-grow: 1;
     flex-basis: 30%;
     position: relative;
 }
-.more_explore-right{
+
+.more_explore-right {
     font-size: 35px;
-    position:absolute;
+    position: absolute;
     top: 105px;
     right: -18px;
 }
-.exp_img img{
+
+.exp_img img {
     border-radius: 10px;
     height: 250px;
     width: 100%;
 }
-.exp_img img:hover{
+
+.exp_img img:hover {
     opacity: 0.9;
 }
-.exp_img p{
+
+.exp_img p {
     font-weight: bold;
     padding: 10px;
     text-align: center;
 }
 
 /* dream your next trip */
-.dream_trip{
+.dream_trip {
     margin-top: 50px;
     margin-left: 12%;
 }
-.dream_trip h1,h3{
-    
-     margin-top: 20px;
-    font-weight:bolder;
+
+.dream_trip h1,
+h3 {
+
+    margin-top: 20px;
+    font-weight: bolder;
 }
-.dream_container{
+
+.dream_container {
     display: flex;
     flex-wrap: wrap;
-    margin-right:12.5% ;
+    margin-right: 12.5%;
     gap: 10px;
     margin-top: 30px;
 }
-.dream_images{
+
+.dream_images {
     width: 100%;
     flex-grow: 1;
-    flex-basis: 20%; 
+    flex-basis: 20%;
     position: relative;
 }
-.dream_images img{
+
+.dream_images img {
     border-radius: 10px;
     width: 100%;
     height: 130%;
 }
-.dream_images img:hover{
+
+.dream_images img:hover {
     opacity: 0.9;
 }
-.dream_images h2{
+
+.dream_images h2 {
     color: white;
     position: absolute;
     font-weight: bolder;
@@ -503,22 +599,25 @@ header {
 
 
 /* top destinations */
-.top_destination{
+.top_destination {
     margin-top: 8%;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    
+
 }
-.top_destination p{
+
+.top_destination p {
     margin-top: 10px;
     color: rgb(85, 84, 84);
     font-size: 16px;
     margin-left: 12%;
 }
-.top_destination h2{
+
+.top_destination h2 {
     margin-left: 12%;
 }
-.dest_container{
+
+.dest_container {
     display: flex;
     flex-wrap: wrap;
     margin-left: 12%;
@@ -526,21 +625,25 @@ header {
     gap: 10px;
     margin-top: 30px;
 }
-.dest_images{
+
+.dest_images {
     width: 100%;
     flex-grow: 1;
-    flex-basis: 20%; 
+    flex-basis: 20%;
     position: relative;
 }
-.dest_images img{
+
+.dest_images img {
     border-radius: 10px;
     width: 100%;
     height: 130%;
 }
-.dest_images img:hover{
+
+.dest_images img:hover {
     opacity: 0.9;
 }
-.dest_images h2{
+
+.dest_images h2 {
     color: white;
     position: absolute;
     font-weight: bolder;
@@ -549,23 +652,24 @@ header {
 }
 
 /* arrow right 2 */
-.arrow_right2{
+.arrow_right2 {
     font-size: 35px;
-    position:absolute;
+    position: absolute;
     top: 115px;
     right: -18px;
 }
 
 /* home rentals near you */
-.home_rent{
+.home_rent {
     margin-top: 8%;
 }
 
-.home_rent h2{
+.home_rent h2 {
     font-weight: bolder;
     margin-left: 12%;
 }
-.rent_container{
+
+.rent_container {
     margin-top: 25px;
     display: flex;
     flex-wrap: wrap;
@@ -573,56 +677,64 @@ header {
     margin-left: 12%;
     margin-right: 11%;
 }
-.rent_h3{
+
+.rent_h3 {
     margin-top: -20px;
     text-align: center;
 }
-.rent_img{
+
+.rent_img {
     width: 100%;
     flex-grow: 1;
-    flex-basis: 20%; 
+    flex-basis: 20%;
     position: relative;
 
-
 }
-.rent_img img{
+
+.rent_img img {
     border-radius: 10px;
     width: 100%;
     height: 110%;
 }
-.rent_img img:hover{
+
+.rent_img img:hover {
     opacity: 0.9;
 }
-.rent_img p{
+
+.rent_img p {
     font-size: 13px;
-    font-weight:800;
+    font-weight: 800;
 }
 
 /* Traveller's Choice */
-.traveller_choice{
+.traveller_choice {
     margin-top: 10%;
     position: relative;
-    
+
 }
-.traveller_choice img{
+
+.traveller_choice img {
     height: 600px;
     width: 100%;
-    
+
 }
-.travel_inside-text{
+
+.travel_inside-text {
     color: black;
     position: absolute;
-    top: 14%;  
+    top: 14%;
     left: 10%;
 }
-.travel_inside-text img{
+
+.travel_inside-text img {
     height: 120px;
     width: 20%;
-   
 
-    
+
+
 }
-.travel_inside-text button{
+
+.travel_inside-text button {
     background-color: black;
     color: white;
     font-weight: bold;
@@ -634,17 +746,19 @@ header {
     margin-top: 20px;
     padding: 5px;
 }
-.travel_inside-text button:hover{
+
+.travel_inside-text button:hover {
     opacity: 0.8;
 }
 
 /* footer the end */
-footer{
+footer {
     background-color: rgb(250, 241, 237);
     margin-top: 50px;
-    
+
 }
-.footer_container{
+
+.footer_container {
     padding: 3%;
     color: rgb(51, 51, 51);
     display: flex;
@@ -652,71 +766,83 @@ footer{
     padding-left: 10%;
     margin-left: -50px;
 }
-.tripad_list{
+
+.tripad_list {
     list-style: none;
-   
+
 }
-.tripad_list > li{
-    font-size:13px;
-   
+
+.tripad_list>li {
+    font-size: 13px;
+
 }
-.tripad_list li:hover{
+
+.tripad_list li:hover {
     text-decoration: underline;
     opacity: 0.8;
 }
 
-.tripad_list-app{
+.tripad_list-app {
     margin-top: 10px;
 }
-.tripad_list p,li{
+
+.tripad_list p,
+li {
     padding-top: 10px;
 }
-.tripad_list-margin{
+
+.tripad_list-margin {
     margin-left: 15%;
 }
 
 /* footer end logo and down */
-.footer_logo{
+.footer_logo {
     display: flex;
-    
+
 }
 
-.footerlogo_end img{
+.footerlogo_end img {
     width: 80px;
     height: 80px;
     margin-top: -15px;
     margin-left: 45px;
 }
-.footer_content_end p{
+
+.footer_content_end p {
     font-size: 11px;
 }
-.footer_content_end{
+
+.footer_content_end {
     text-align: left;
-    
-    
+
+
 }
-.footer_content_end > span{
-   
-   text-decoration: underline;
-   font-size: medium;
-   
+
+.footer_content_end>span {
+
+    text-decoration: underline;
+    font-size: medium;
+
 }
-.footer_content_end > span:hover{
+
+.footer_content_end>span:hover {
     opacity: 0.7;
 }
+
 /* footer button */
-.footer_button{
+.footer_button {
     margin-left: 18%;
     /* display: flex; */
-    border: 2px solid rgb(205,204,204);
+    border: 2px solid rgb(205, 204, 204);
     border-radius: 10px;
     height: 35px;
     width: 200px;
     background-color: white;
-    
+
 
 }
-.footer_button > button{
+
+.footer_button>button {
     border-radius: 10px;
     width: 170px;
     text-align: left;
@@ -725,48 +851,355 @@ footer{
     padding: 5px;
     border: none;
     background-color: white;
-    
-    
+
+
 }
-.footer_button img{
-   
-   height: 10px;
-   width: 10px;
+
+.footer_button img {
+
+    height: 10px;
+    width: 10px;
 }
-.button_two{
+
+.button_two {
     margin-left: 20px;
 }
- .footer_button >button:hover{
+
+.footer_button>button:hover {
     background-color: rgb(232, 224, 224);
 }
-.footer_button:hover{
+
+.footer_button:hover {
     background-color: rgb(232, 224, 224);
 }
 
 /* para div last line */
-.last_para{
+.last_para {
     display: flex;
     flex-direction: row;
     margin-left: 8%;
 }
-.para_div_last{
+
+.para_div_last {
     font-size: 12px;
     color: rgb(51, 51, 51);
     font-weight: 400px;
     padding-bottom: 5%;
 }
-.para_div_last  .fa-pinterest{
-    margin-left:275px
+
+.para_div_last .fa-pinterest {
+    margin-left: 275px
 }
-.para_div_last i{
+
+.para_div_last i {
     font-size: 28px;
     padding: 13px;
 }
-.para_div_last i:hover{
+
+.para_div_last i:hover {
     opacity: 0.7;
 }
 
 /* media queries */
 @media screen and (max-width:800px) {
-    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        /* font-size: 14px; */
+    }
+
+    /* nav bar */
+    .left_menu-nav {
+        margin-left: -100px;
+        display: block;
+    }
+
+    .header_nav {
+        padding: 15px;
+        margin-left: -10px;
+        margin-right: 0px;
+    }
+
+    .nav_logo img {
+        width: 140px;
+        height: 35px;
+        margin-left: -120px;
+    }
+
+    .nav_middle,
+    .nav_end,
+    .bold_display,
+    .arrow_right {
+        display: none;
+    }
+
+    /* input box */
+    .parent_container {
+        border: 2px solid rgb(214, 212, 212);
+        width: 430px;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15);
+        margin-left: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputbox_container {
+        margin-top: 20px;
+        height: 50px;
+        width: 400px;
+        box-shadow: none;
+        border: none;
+    }
+
+    .inputbox_container input {
+        width: 250px;
+    }
+
+    .parent_container button {
+        width: 400px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    /* big image */
+    .bigimg_sec5 img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .bigimg_logo {
+        display: none;
+    }
+
+    .inside_img {
+        top: 50%;
+        left: 10px;
+    }
+
+    /* banglore img*/
+    .beng_exp {
+        margin-left: 3%;
+    }
+
+    .beng_container {
+        margin-left: 7px;
+        margin-right: 10px;
+
+    }
+
+    .beng_img {
+        flex-grow: 1;
+        flex-basis: 45%;
+        margin-left: 3%;
+    }
+
+    .beng_img img {}
+
+    .vibrant_asian {
+        margin-top: 40px;
+        margin-left: 3%;
+    }
+
+    .vibrant_container {
+        margin-left: 3%;
+        margin-right: 3%
+    }
+
+    .vibrant_images {
+        height: 200px;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        flex-basis: 40%;
+        margin-top: 40px;
+    }
+
+    /* australia images */
+    .aus_hol {
+        margin-top: 20%;
+        margin-left: 0px;
+        width: 100%;
+        height: 700px;
+        /* font-size: medium; */
+    }
+
+    .aus_img {
+        height: 600px;
+        width: 920px;
+
+    }
+
+    .aus_hidden {
+        left: 10px;
+        top: 460px;
+        text-align: left;
+
+    }
+
+    .read_more button {
+        left: 0px;
+
+    }
+
+    /* more to explore */
+    .more_explore>h2 {
+        margin-bottom: 20px;
+        margin-left: 10px;
+
+    }
+
+    .exp__img--container {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .exp_img img {
+        height: 250px;
+        /* width: 100%;
+    height: 200px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-basis: 50%; */
+    }
+
+    .more_explore-right {
+        display: none;
+    }
+
+    /* dream trip */
+    .dream_trip {
+        margin-left: 10px;
+        width: 107%;
+    }
+
+    .dream_images {
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 40%;
+        height: 200px;
+
+
+    }
+
+    .dream_images-margin {
+        margin-top: 80px;
+    }
+
+    .arrow_right2 {
+        display: none;
+    }
+
+    /* top destinations */
+    .top_destination {
+        margin-top: 100px;
+        margin-left: -50px;
+    }
+
+    .dest_container {
+        margin-right: 10px;
+
+    }
+
+    .dest_images {
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 40%;
+        height: 200px;
+
+
+
+    }
+
+    .dest_images-margin {
+        margin-top: 70px;
+    }
+
+    /* home rentals near you */
+    .home_rent h2 {
+        margin-top: 100px;
+        margin-left: 10px;
+    }
+
+    .rent_h3 h3 {
+
+        text-align: left;
+
+    }
+
+    .rent_container {
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .rent_img {
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 40%;
+
+
+    }
+
+    .rent_img-hidden,
+    .tripad_list-app,
+    .footer_button,
+    .footer_content_end>span,
+    .para_div_last {
+        display: none;
+    }
+
+    /* travelers best choice big img */
+    .traveller_choice {
+        margin-top: 150px;
+
+
+    }
+
+    .traveller_choice img {
+        border-radius: 20px;
+
+    }
+
+    .travel_inside-text {
+        font-size: 15px;
+        margin-left: -20px;
+    }
+
+    /* footer */
+    .footer_container {
+        margin-left: -20px;
+    }
+
+    .tripad_list-margin {
+        margin-left: 0px;
+    }
+
+    .last_para {
+        position: relative;
+    }
+
+    .paradiv_last-icons {
+        display: block;
+        /* margin-left: 10px; */
+        /* padding-left: -50px; */
+
+    }
+
+    .para_div_last {}
+
+    .fa-facebook {
+        position: absolute;
+        left: 215px;
+    }
+
+
+
 }
