@@ -52,14 +52,19 @@ header {
 }
 
 .discover_box {
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
+    /* width: 10px; */
+    /* display: inline; */
     /* background-color: transparent; */
+    padding: 5px;
     text-align: center;
+    margin-top: -5px;
+
 }
 
 .discover_box:hover {
 
-    padding: 5px;
+
     border-radius: 50px;
     background-color: rgb(230, 224, 224);
 }
@@ -116,19 +121,21 @@ header {
 /* search all , retaurants with icons */
 .search_container {
     margin-top: 30px;
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     /* align-items: center; */
-    gap: 30px;
+    gap: 40px;
 
 }
 
 .search_sec3 {
     display: flex;
+
     align-items: center;
     gap: 5px;
+    border-bottom: 2px solid transparent;
 
 }
 
@@ -151,6 +158,12 @@ header {
 }
 
 /* input box sec4 */
+.parent_parent_container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
 .parent_container {
     margin-top: 30px;
     display: flex;
@@ -160,12 +173,15 @@ header {
     height: 6%;
     width: 59%;
     border-radius: 50px;
-    margin-left: 20%;
+    /* margin-left: 15%;
+    margin-left: 15%; */
     box-shadow: 0px 7px 10px rgb(231, 223, 223);
 }
 
 .inputbox_container {
     display: flex;
+    width: 87%;
+    justify-content: center;
 
 }
 
@@ -190,7 +206,7 @@ header {
     letter-spacing: 1px;
     border-radius: 40px;
     height: 50px;
-    width: 100px;
+    width: 100%;
     margin: 4px;
     border: none;
 }
@@ -885,10 +901,13 @@ li {
     color: rgb(51, 51, 51);
     font-weight: 400px;
     padding-bottom: 5%;
+
 }
 
-.para_div_last .fa-pinterest {
-    margin-left: 275px
+.last_para {
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .para_div_last i {
@@ -901,33 +920,81 @@ li {
 }
 
 /* media queries */
+
+@media screen and (max-width:1100px) {
+
+    .dream_images {
+        height: 200px;
+    }
+
+    .arrow_right2 {
+        display: none;
+    }
+
+    .top_destination {
+        margin-top: 10%;
+    }
+
+    .rent_img-hidden {
+        display: none;
+    }
+
+    .rent_img {
+        height: 150px;
+        flex-grow: 1;
+        flex-basis: 20%;
+    }
+
+    .traveller_choice {
+        margin-top: 20%;
+    }
+
+    .footer_button {
+        position: relative;
+    }
+
+    .footer_button img {
+        position: absolute;
+        top: 7px;
+        right: 12px;
+        width: 15px;
+        height: 15px;
+
+    }
+
+    .footer_content_end>span {
+        display: none;
+    }
+
+    .paradiv_last-icons i {
+        flex-grow: 1;
+        flex-basis: 2%;
+    }
+}
+
 @media screen and (max-width:800px) {
+
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
-    body {
-        /* font-size: 14px; */
-    }
-
     /* nav bar */
     .left_menu-nav {
-        margin-left: -100px;
+        margin-left: -0px;
         display: block;
     }
 
     .header_nav {
+        margin-left: -150px;
         padding: 15px;
-        margin-left: -10px;
-        margin-right: 0px;
     }
 
     .nav_logo img {
         width: 140px;
         height: 35px;
-        margin-left: -120px;
+        margin-left: -200px;
     }
 
     .nav_middle,
@@ -938,17 +1005,23 @@ li {
     }
 
     /* input box */
+    .parent_parent_container {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
     .parent_container {
         border: 2px solid rgb(214, 212, 212);
-        width: 430px;
+        width: 350px;
         height: 130px;
         display: flex;
         justify-content: center;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.15);
-        margin-left: 25px;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .inputbox_container {
@@ -957,6 +1030,7 @@ li {
         width: 400px;
         box-shadow: none;
         border: none;
+        margin-left: -50px;
     }
 
     .inputbox_container input {
@@ -964,7 +1038,7 @@ li {
     }
 
     .parent_container button {
-        width: 400px;
+        width: 320px;
         margin-top: 25px;
         margin-bottom: 15px;
         padding: 10px;
@@ -981,7 +1055,7 @@ li {
     }
 
     .inside_img {
-        top: 50%;
+        top: 40%;
         left: 10px;
     }
 
@@ -1027,19 +1101,328 @@ li {
         margin-top: 20%;
         margin-left: 0px;
         width: 100%;
-        height: 700px;
+        height: 800px;
+
         /* font-size: medium; */
     }
 
     .aus_img {
-        height: 600px;
-        width: 920px;
+        height: 400px;
+        width: 800px;
 
     }
 
     .aus_hidden {
         left: 10px;
-        top: 460px;
+        top: 500px;
+        text-align: left;
+
+    }
+
+    .read_more button {
+        left: 0px;
+
+    }
+
+    /* more to explore */
+    .more_explore>h2 {
+        margin-bottom: 20px;
+        margin-left: 10px;
+
+    }
+
+    .exp__img--container {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .exp_img img {
+        height: 250px;
+    }
+
+    .more_explore-right {
+        display: none;
+    }
+
+    /* dream trip */
+    .dream_trip {
+        margin-left: 10px;
+        width: 107%;
+    }
+
+    .dream_images {
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 40%;
+        height: 200px;
+
+
+    }
+
+    .dream_images-margin {
+        margin-top: 80px;
+    }
+
+    .arrow_right2 {
+        display: none;
+    }
+
+    /* top destinations */
+    .top_destination {
+        margin-top: 100px;
+        margin-left: -50px;
+    }
+
+    .dest_container {
+        margin-right: 10px;
+
+    }
+
+    .dest_images {
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 40%;
+        height: 200px;
+
+
+
+    }
+
+    .dest_images-margin {
+        margin-top: 70px;
+    }
+
+    /* home rentals near you */
+    .home_rent h2 {
+        margin-top: 100px;
+        margin-left: 10px;
+    }
+
+    .rent_h3 h3 {
+
+        text-align: left;
+
+    }
+
+    .rent_container {
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .rent_img {
+        height: 150px;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 20%;
+    }
+
+    .rent_img-hidden,
+    .tripad_list-app,
+    .footer_button,
+    .footer_content_end>span,
+    .para_div_last {
+        display: none;
+    }
+
+    /* travelers best choice big img */
+    .traveller_choice {
+        margin-top: 150px;
+
+
+    }
+
+    .traveller_choice img {
+        border-radius: 20px;
+
+    }
+
+    .travel_inside-text {
+        font-size: 15px;
+        margin-left: -20px;
+    }
+
+    /* footer */
+    .footer_container {
+        margin-left: -10px;
+        /* flex-wrap: wrap; */
+    }
+
+    .tripad_list-margin {
+        margin-left: -10px;
+    }
+
+    .last_para {
+        position: relative;
+    }
+
+    .paradiv_last-icons {
+        display: block;
+
+    }
+
+    .last_para {
+        display: flex;
+        justify-content: end;
+    }
+
+    .para_div_last {
+        display: flex;
+        /* justify-content:space-evenly; */
+    }
+
+    .para_last-hidden {
+        display: none;
+    }
+}
+
+
+
+/* media queries 600px*/
+@media screen and (max-width:600px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* nav bar */
+    .left_menu-nav {
+        margin-left: -100px;
+        display: block;
+    }
+
+    .header_nav {
+        padding: 15px;
+        margin-left: -10px;
+        /* margin-right: 0px; */
+        margin-right: 1px;
+    }
+
+    .nav_logo img {
+        width: 140px;
+        height: 35px;
+        margin-left: -150px;
+    }
+
+    .nav_middle,
+    .nav_end,
+    .bold_display,
+    .arrow_right {
+        display: none;
+    }
+
+    /* input box */
+    .parent_parent_container {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .parent_container {
+        border: 2px solid rgb(214, 212, 212);
+        width: 350px;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputbox_container {
+        margin-top: 20px;
+        height: 50px;
+        width: 400px;
+        box-shadow: none;
+        border: none;
+        margin-left: -50px;
+    }
+
+    .inputbox_container input {
+        width: 250px;
+    }
+
+    .parent_container button {
+        width: 320px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    /* big image */
+    .bigimg_sec5 img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .bigimg_logo {
+        display: none;
+    }
+
+    .inside_img {
+        top: 40%;
+        left: 10px;
+    }
+
+    /* banglore img*/
+    .beng_exp {
+        margin-left: 3%;
+    }
+
+    .beng_container {
+        margin-left: 7px;
+        margin-right: 10px;
+
+    }
+
+    .beng_img {
+        flex-grow: 1;
+        flex-basis: 45%;
+        margin-left: 3%;
+    }
+
+    .beng_img img {}
+
+    .vibrant_asian {
+        margin-top: 40px;
+        margin-left: 3%;
+    }
+
+    .vibrant_container {
+        margin-left: 3%;
+        margin-right: 3%
+    }
+
+    .vibrant_images {
+        height: 200px;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        flex-basis: 40%;
+        margin-top: 40px;
+    }
+
+    /* australia images */
+    .aus_hol {
+        margin-top: 20%;
+        margin-left: 0px;
+        width: 100%;
+        height: 800px;
+
+        /* font-size: medium; */
+    }
+
+    .aus_img {
+        height: 400px;
+        width: 800px;
+
+    }
+
+    .aus_hidden {
+        left: 10px;
+        top: 500px;
         text-align: left;
 
     }
@@ -1143,7 +1526,9 @@ li {
     .rent_img {
         flex-wrap: wrap;
         flex-grow: 1;
-        flex-basis: 40%;
+        flex-basis: 45%;
+
+
 
 
     }
@@ -1175,11 +1560,12 @@ li {
 
     /* footer */
     .footer_container {
-        margin-left: -20px;
+        margin-left: -10px;
+        /* flex-wrap: wrap; */
     }
 
     .tripad_list-margin {
-        margin-left: 0px;
+        margin-left: -10px;
     }
 
     .last_para {
@@ -1188,18 +1574,99 @@ li {
 
     .paradiv_last-icons {
         display: block;
-        /* margin-left: 10px; */
-        /* padding-left: -50px; */
-
     }
 
-    .para_div_last {}
-
-    .fa-facebook {
-        position: absolute;
-        left: 215px;
+    .last_para {
+        display: flex;
+        justify-content: end;
     }
 
+    .para_div_last {
+        display: flex;
+    }
 
-
+    .para_last-hidden {
+        display: none;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .parent_container{
+       
+    }
+    .inputbox_container{
+        margin-left: 0px;
+        
+        
+    }
+    .inputbox_container input{
+        width: 400px;
+    }
+    .rent_img-hidden{
+        display: none;
+    }
+    .traveller_choice{
+        margin-top: 200px;
+    }
+    .footer{
+        margin-top: 300px;
+    }
+    .arrow_right2{
+        display: none;
+    }
+    .vibrant_asian{
+        margin-top: 100px;
+    }
+    .vibrant_images{
+        height: 200px;
+    }
+    .aus_hidden{
+        font-size: 10px;
+        left: 350px;
+    }
+    .read_more{
+        left: 110px;
+    }
+    .dream_images{
+        height: 200px;
+    }
+    .footer_button{
+        position: relative;
+    }
+    .footer_button img{
+        position: absolute;
+        left: 150px;
+        top: 7px;
+        height: 15px;
+        width: 15px;
+    }
+    .para_div_last{
+        position: relative;
+    }
+    .fa-pinterest{
+        position: absolute;
+        right: 0px;
+    }
+    .fa-facebook{
+        display: none;
+    } */
