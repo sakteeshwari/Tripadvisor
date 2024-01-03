@@ -373,14 +373,14 @@ header {
 
 /* vibrant asian */
 .vibrant_asian {
-    margin-top: -30px;
+    margin-top:3%;
     display: flex;
     flex-direction: column;
     margin-left: 12%;
 }
 
 .vibrant_asian p {
-    margin-top: 10px;
+    margin-top: 7px;
     color: rgb(85, 84, 84);
     font-size: 16px;
 }
@@ -970,6 +970,9 @@ li {
         flex-grow: 1;
         flex-basis: 2%;
     }
+    .vibrant_asian{
+        margin-top: 7%;
+    }
 }
 
 @media screen and (max-width:800px) {
@@ -1259,6 +1262,7 @@ li {
     .paradiv_last-icons {
         display: block;
 
+
     }
 
     .last_para {
@@ -1278,12 +1282,18 @@ li {
 
 
 
+
+
 /* media queries 600px*/
 @media screen and (max-width:600px) {
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+
+    body {
+        /* font-size: 14px; */
     }
 
     /* nav bar */
